@@ -166,7 +166,7 @@ export default function Example() {
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
-                        <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                        <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="logo" />
                     </a>
                 </div>
                 <div className="flex lg:hidden">
@@ -182,11 +182,11 @@ export default function Example() {
                 <Popover.Group className="hidden lg:flex lg:gap-x-10">
                     <a href="#" className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1">
                         <Pizza />
-                        Pizza's
+                        Pizzas
                     </a>
                     <a href="#" className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1">
                         <Sandwich />
-                        Hamburguer's
+                        Hamburguers
                     </a>
                     <a href="#" className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1">
                         <ChefHat />
@@ -239,14 +239,14 @@ export default function Example() {
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800"
                                 >
                                     <Pizza />
-                                    Pizza's
+                                    Pizzas
                                 </a>
                                 <a
                                     href="#"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800"
                                 >
                                     <Sandwich />
-                                    Hamburguer's
+                                    Hamburguers
                                 </a>
                                 <a
                                     href="#"
