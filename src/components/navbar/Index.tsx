@@ -182,15 +182,15 @@ export default function Example() {
                 <Popover.Group className="hidden lg:flex lg:gap-x-10">
                     <a href="#" className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1">
                         <Pizza />
-                        Pizzas
+                        Pizza
                     </a>
                     <a href="#" className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1">
                         <Sandwich />
-                        Hamburguers
+                        Hamburguer
                     </a>
                     <a href="#" className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1">
                         <ChefHat />
-                        Petiscos
+                        Petisco
                     </a>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -239,21 +239,21 @@ export default function Example() {
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800"
                                 >
                                     <Pizza />
-                                    Pizzas
+                                    Pizza
                                 </a>
                                 <a
                                     href="#"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800"
                                 >
                                     <Sandwich />
-                                    Hamburguers
+                                    Hamburguer
                                 </a>
                                 <a
                                     href="#"
                                     className="-mx-3 block rounded-lg gap-2 px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800"
                                 >
                                     <ChefHat />
-                                    Petiscos
+                                    Petisco
                                 </a>
                             </div>
                             <div className=''>
