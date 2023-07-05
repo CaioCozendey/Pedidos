@@ -1,14 +1,11 @@
-import Principal from "@/components/Main";
-import Navbar from "@/components/Navbar";
+import Principal from "@/components/main/Index";
+import Navbar from "@/components/navbar/Index";
 
 export default function Home() {
   return (
-    <div>
+    <div className="font-mono">
       <Navbar />
-      <main>
-        <Principal />
-      </main>
-
+      <Principal />
     </div>
   )
 }
