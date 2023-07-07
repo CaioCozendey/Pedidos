@@ -1,17 +1,15 @@
 'use client'
 
-import { Fragment, useState } from 'react'
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import { Link } from "react-scroll"
+import { useState } from 'react'
+import { Dialog, Disclosure, Popover } from '@headlessui/react'
 import {
-    ArrowPathIcon,
     Bars3Icon,
     ChartPieIcon,
     CursorArrowRaysIcon,
     FingerPrintIcon,
-    SquaresPlusIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { ShoppingCart, ChefHat, Pizza, Sandwich } from 'lucide-react'
 import Image from 'next/image'
 
@@ -21,20 +19,16 @@ const products = [
     { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
 ]
 
-function classNames(...classes: string[]) {
-    return classes.filter(Boolean).join(' ')
-}
-
-export default function Example() {
+export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="bg-red-700 xl:px-40 lg:px-40">
+        <header className="bg-red-700 xl:px-40 lg:px-40 fixed w-full">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 bg-red-700" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
-                        <Image className="h-8 w-auto" src="/logo.jpg" width={32} height={32} alt="logo" />
+                        <Image className="h-12 w-auto" src="/logo.png" width={256} height={256} alt="Logo Conceito Gourmet" />
                     </a>
                 </div>
                 <div className="flex lg:hidden">
@@ -48,18 +42,18 @@ export default function Example() {
                     </button>
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-10">
-                    <a href="#" className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1">
+                    <Link className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1 cursor-pointer" to='pizza' spy={true} smooth={true} offset={-100} duration={500}>
                         <Pizza />
                         Pizza
-                    </a>
-                    <a href="#" className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1">
+                    </Link>
+                    <Link className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1 cursor-pointer" to='hamburguer' spy={true} smooth={true} offset={-100} duration={500}>
                         <Sandwich />
                         Hamburguer
-                    </a>
-                    <a href="#" className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1">
+                    </Link>
+                    <Link className="text-md flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1 cursor-pointer" to='petisco' spy={true} smooth={true} offset={-100} duration={500}>
                         <ChefHat />
                         Petisco
-                    </a>
+                    </Link>
                 </Popover.Group>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <a href="#" className="text-sm flex flex-row gap-2 font-semibold leading-7 text-white hover:bg-red-800 rounded-lg px-4 py-1">
@@ -102,27 +96,32 @@ export default function Example() {
                                         </>
                                     )}
                                 </Disclosure>
-                                <a
-                                    href="#"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800"
+                                <Link
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800 cursor-pointer"
+                                    to='pizza' spy={true} smooth={true} offset={-100} duration={500}
+                                    onClick={() => setMobileMenuOpen(false)}
                                 >
                                     <Pizza />
                                     Pizza
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="#"
-                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800"
+                                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800 cursor-pointer"
+                                    to='hamburguer' spy={true} smooth={true} offset={-100} duration={500}
+                                    onClick={() => setMobileMenuOpen(false)}
                                 >
                                     <Sandwich />
                                     Hamburguer
-                                </a>
-                                <a
+                                </Link>
+                                <Link
                                     href="#"
-                                    className="-mx-3 block rounded-lg gap-2 px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800"
+                                    className="-mx-3 block rounded-lg gap-2 px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-red-800 cursor-pointer"
+                                    to='petisco' spy={true} smooth={true} offset={-100} duration={500}
+                                    onClick={() => setMobileMenuOpen(false)}
                                 >
                                     <ChefHat />
                                     Petisco
-                                </a>
+                                </Link>
                             </div>
                             <div className=''>
                                 <a
